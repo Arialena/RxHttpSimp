@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/white_background">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_view"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/white_background"
+                android:src="@mipmap/ic_launcher" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!--style="@style/Base.TextAppearance.AppCompat.Display1"-->
+                <TextView
+                    android:id="@+id/title_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="有新版本"
+                    android:textColor="#222222"
+                    android:textSize="18dp" />
+
+                <!--style="@style/Base.TextAppearance.AppCompat.Medium"-->
+                <TextView
+                    android:id="@+id/sub_title_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#3d3d3d"
+                    android:textSize="16dp"
+                    android:visibility="gone" />
+
+                <!--style="@style/Base.TextAppearance.AppCompat.Small"-->
+                <TextView
+                    android:id="@+id/body_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left|top"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:maxLines="5"
+                    android:ellipsize="end"
+                    android:paddingTop="10dp"
+                    android:text="升级优化："
+                    android:textColor="#6c6c6c"
+                    android:textSize="14dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#dcdcdc"/>
+                <LinearLayout
+                    android:id="@+id/buttons_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="visible">
+
+                    <!--style="@style/Widget.AppCompat.Button.Borderless.Colored"-->
+                    <Button
+                        android:id="@+id/cancle_btn"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:text="取消"
+                        android:textColor="#9e9e9e"
+                        android:textSize="15dp" />
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:background="#dcdcdc"/>
+
+                    <!--style="@style/Widget.AppCompat.Button.Borderless.Colored"-->
+                    <Button
+                        android:id="@+id/down_btn"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:clickable="true"
+                        android:layout_weight="1"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:text="下载"
+                        android:textColor="#17b690"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+</FrameLayout>

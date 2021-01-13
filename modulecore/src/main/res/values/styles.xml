@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--动画加载-->
+    <style name="TransparentDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <!--android:backgroundDimEnabled 此属性控制悬浮窗背景是否变暗-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>
