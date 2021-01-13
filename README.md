@@ -10,5 +10,5 @@ allprojects {
 
 第二步：
 dependencies {
-	        implementation 'com.github.Arialena:RxHttpSimp:1.0.0'
+	        implementation 'com.github.Arialena:RxHttpSimp:${Latest}'
 	}
