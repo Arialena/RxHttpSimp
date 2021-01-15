@@ -9,6 +9,8 @@ import com.wy.arialena.modulecore.receiver.NetWorkStateReceiver;
 import com.wy.arialena.modulecore.utils.MyActivityManager;
 
 import androidx.multidex.MultiDex;
+import me.jessyan.autosize.AutoSize;
+import me.jessyan.autosize.AutoSizeConfig;
 
 /**
  * @author wuyan
@@ -23,6 +25,9 @@ public class BaseApplication extends Application {
         context = this;
         mInst = this;
         ContextHolder.initial(this);
+
+        AutoSizeConfig.getInstance().setCustomFragment(true);
+        AutoSize.initCompatMultiProcess(this);
 
         NetWorkStateReceiver.getInstance().init(this,false);
     }

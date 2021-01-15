@@ -40,6 +40,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.BehaviorSubject;
 import io.reactivex.subjects.Subject;
+import me.jessyan.autosize.internal.CustomAdapt;
 
 /**
  * @author wuyan
@@ -47,7 +48,7 @@ import io.reactivex.subjects.Subject;
  * @param <V>
  */
 public abstract class BaseLazyLoadFragment<P extends BasePresenter, V extends IContractView> extends RxFragment
-        implements FragmentLifecycleable, IBaseFragment<P>,IContractView {
+        implements FragmentLifecycleable, IBaseFragment<P>,IContractView, CustomAdapt {
     private String TAG = BaseLazyLoadFragment.class.getSimpleName();
     protected View rootView = null;
     private boolean mIsFirstVisible = true;
@@ -446,5 +447,18 @@ public abstract class BaseLazyLoadFragment<P extends BasePresenter, V extends IC
     @Override
     public Subject<FragmentEvent> provideLifecycleSubject() {
         return mLifecycleSubject;
+    }
+
+    /**
+     * 手机适配
+     */
+    @Override
+    public boolean isBaseOnWidth() {
+        return false;
+    }
+
+    @Override
+    public float getSizeInDp() {
+        return 667;
     }
 }

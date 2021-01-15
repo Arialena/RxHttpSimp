@@ -24,12 +24,14 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
+import me.jessyan.autosize.internal.CustomAdapt;
 
 
 /**
  * @author wuyan
  */
-public abstract class BaseActivity<P extends BasePresenter, V extends IContractView> extends BaseAppActivity<P, V> {
+public abstract class BaseActivity<P extends BasePresenter, V extends IContractView>
+        extends BaseAppActivity<P, V> implements CustomAdapt {
     private ActionBar actionBar;
 
     @Override
@@ -213,5 +215,18 @@ public abstract class BaseActivity<P extends BasePresenter, V extends IContractV
         if (statusBarView != null) {
             statusBarView.setBackgroundResource(statusDrawable);
         }
+    }
+
+    /**
+     * 手机适配
+     */
+    @Override
+    public boolean isBaseOnWidth() {
+        return false;
+    }
+
+    @Override
+    public float getSizeInDp() {
+        return 667;
     }
 }

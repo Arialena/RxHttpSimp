@@ -69,4 +69,11 @@ dependencies {
     api 'com.jakewharton.rxrelay2:rxrelay:2.1.1'
     //版本更新
     api 'com.lzy.net:okgo:3.0.4'
+
+    //mmkv腾讯开源组件 代替SharedPreferences
+    api 'com.tencent:mmkv:1.0.23'
+    //手机适配
+    api 'me.jessyan:autosize:1.2.1'
+    //调用系统分享工具
+    api 'gdut.bsx:share2:0.9.3'
 }
