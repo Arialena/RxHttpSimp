@@ -1,5 +1,6 @@
 
 添加使用方法
+
 第一步：
 allprojects {
 		repositories {
@@ -15,6 +16,9 @@ dependencies {
 
 使用
 Application继承BaseApplication
+
 初始化http请求
+
 activity继承BaseActivity
+
 fragment继承BaseLazyLoadFragment
